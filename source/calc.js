@@ -19,21 +19,21 @@ $(document).ready(function () {
     $('#ohoh').text(displayValue); //result에 결과물을 넣음
     $('#result').text(displayValue); //result에 결과물을 넣음
 
-    $("#ohoh").unbind("click focus").on("click focus", function (e) { // 모바일 가상키보드 숨김
-        var id = $(this).attr("id");
-        $(this).attr("readonly", true);
-        setTimeout(function () {
-            $("#" + id).attr("readonly", false);
-        }, 10);
-    });
-
-    $("#ohoh").unbind("mousestart mousemove mouseup").on("mousestart mousemove mouseup", function (e) { // 모바일 가상키보드 숨김
-        var id = $(this).attr("id");
-        $(this).attr("readonly", true);
-        setTimeout(function () {
-            $("#" + id).attr("readonly", false);
-        }, 10);
-    });
+    // $("#ohoh").unbind("click focus").on("click focus", function (e) { // 모바일 가상키보드 숨김
+    //     var id = $(this).attr("id");
+    //     $(this).attr("readonly", true);
+    //     setTimeout(function () {
+    //         $("#" + id).attr("readonly", false);
+    //     }, 10);
+    // });
+    //
+    // $("#ohoh").unbind("mousestart mousemove mouseup").on("mousestart mousemove mouseup", function (e) { // 모바일 가상키보드 숨김
+    //     var id = $(this).attr("id");
+    //     $(this).attr("readonly", true);
+    //     setTimeout(function () {
+    //         $("#" + id).attr("readonly", false);
+    //     }, 10);
+    // });
 
     $('#latex').html('$$' + math.parse(displayValue).toTex() + '$$'); //latex에 넣는건가?
 
