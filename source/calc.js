@@ -326,7 +326,8 @@ $(document).ready(function () {
                         $('#ohoh').text(displayValue); //이거 맨 뒤 한글자만 줄일때
                         $('#ohoh').focus();
                         document.getElementById("ohoh").selectionEnd = cursor_position + 1;//이렇게 하면 되는구만
-
+                        
+                        document.getElementById("ohoh").selectionStart=cursor_position + 1;//이렇게 하면 되는구만
                     }
 
                 }
